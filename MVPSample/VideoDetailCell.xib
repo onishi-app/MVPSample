@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoDetailCell" rowHeight="246" id="KGk-i7-Jjw" customClass="VideoDetailCell" customModule="MVPSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igb-ke-8jp">
+                        <rect key="frame" x="0.0" y="10" width="320" height="178"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="178" id="F25-vz-GBb"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-Aq-pf9">
+                        <rect key="frame" x="30" y="198" width="280" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="動画タイトルが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZD-ea-ZoQ">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間が入ります。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEb-N7-Xt7">
+                                <rect key="frame" x="0.0" y="26" width="280" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="RZD-ea-ZoQ" firstAttribute="leading" secondItem="bfO-Aq-pf9" secondAttribute="leading" id="8Cl-k8-ZN5"/>
+                            <constraint firstItem="PEb-N7-Xt7" firstAttribute="top" secondItem="RZD-ea-ZoQ" secondAttribute="bottom" constant="8" symbolic="YES" id="aFe-nR-PCW"/>
+                            <constraint firstAttribute="trailing" secondItem="RZD-ea-ZoQ" secondAttribute="trailing" id="bIk-2W-g48"/>
+                            <constraint firstItem="RZD-ea-ZoQ" firstAttribute="top" secondItem="bfO-Aq-pf9" secondAttribute="top" id="lj7-MD-cnC"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="igb-ke-8jp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Fw-Y7-WRW"/>
+                    <constraint firstItem="igb-ke-8jp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9bD-cp-knd"/>
+                    <constraint firstItem="bfO-Aq-pf9" firstAttribute="top" secondItem="igb-ke-8jp" secondAttribute="bottom" constant="10" id="Ayx-Oh-o0z"/>
+                    <constraint firstItem="bfO-Aq-pf9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Eed-sh-Mpg"/>
+                    <constraint firstAttribute="trailing" secondItem="bfO-Aq-pf9" secondAttribute="trailing" constant="10" id="dNn-uO-Bjb"/>
+                    <constraint firstAttribute="trailing" secondItem="igb-ke-8jp" secondAttribute="trailing" id="hSc-gd-flR"/>
+                    <constraint firstAttribute="bottom" secondItem="bfO-Aq-pf9" secondAttribute="bottom" constant="10" id="lEz-5M-Rky"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="date" destination="PEb-N7-Xt7" id="3PX-IX-r77"/>
+                <outlet property="thumbnail" destination="igb-ke-8jp" id="GrQ-qe-8pY"/>
+                <outlet property="title" destination="RZD-ea-ZoQ" id="Svs-le-NMf"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="29"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hpp-V8-hO9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Video View Controller-->
+        <scene sceneID="MR4-aQ-G7w">
+            <objects>
+                <viewController storyboardIdentifier="SearchVideo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZKn-GN-DRk" customClass="SearchVideoViewController" customModule="MVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKZ-BA-aV8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力してください。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8x-7Z-2aQ">
+                                <rect key="frame" x="20" y="388" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yS-h2-RDj">
+                                <rect key="frame" x="186.5" y="522" width="41" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="v6C-uI-A7Z"/>
+                                    <constraint firstAttribute="width" constant="41" id="voh-lk-Ul9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="pushSearchButton:" destination="ZKn-GN-DRk" eventType="touchUpInside" id="5Sc-HL-aop"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="adg-IO-s9C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N8x-7Z-2aQ" firstAttribute="top" secondItem="adg-IO-s9C" secondAttribute="top" constant="300" id="5rE-3r-ShC"/>
+                            <constraint firstItem="N8x-7Z-2aQ" firstAttribute="leading" secondItem="adg-IO-s9C" secondAttribute="leading" constant="20" id="7yB-Xj-dpX"/>
+                            <constraint firstItem="adg-IO-s9C" firstAttribute="trailing" secondItem="N8x-7Z-2aQ" secondAttribute="trailing" constant="20" id="OW9-mm-rpz"/>
+                            <constraint firstItem="0yS-h2-RDj" firstAttribute="centerX" secondItem="tKZ-BA-aV8" secondAttribute="centerX" id="Vi1-1P-Kac"/>
+                            <constraint firstItem="0yS-h2-RDj" firstAttribute="top" secondItem="N8x-7Z-2aQ" secondAttribute="bottom" constant="100" id="bLb-u3-RC7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rco-O0-yXr"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="N8x-7Z-2aQ" id="dH5-e4-d5Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gja-S1-jr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3939.130434782609" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XcM-cl-HPV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hpp-V8-hO9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FUJ-vh-gtx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZKn-GN-DRk" kind="relationship" relationship="rootViewController" id="uw4-rp-2IZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oov-nK-uHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3028.985507246377" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
